@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="record"
+            type="com.example.diliptestapp.data.db.entities.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+
+        <ImageView
+            android:id="@+id/iv_thumb"
+
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+
+            android:layout_centerHorizontal="true"
+            android:img="@{record.avatarUrl+'#'+record.id}"
+            android:scaleType="fitXY"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{record.login}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{record.type}"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+</layout>
